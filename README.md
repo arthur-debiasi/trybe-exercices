@@ -1,0 +1,1 @@
+This repository contains the exercices folder from my Software Developer Course at Trybe.
