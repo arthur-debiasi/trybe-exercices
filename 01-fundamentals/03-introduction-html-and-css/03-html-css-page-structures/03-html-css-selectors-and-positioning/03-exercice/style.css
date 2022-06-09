@@ -1,3 +1,9 @@
 h1, p {
     text-align: center;
 }
+li:hover {
+    background-color: hotpink;
+}
+li:active {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
