@@ -30,16 +30,30 @@
 // 3. Faça um programa que retorne o maior de três números.
 // Defina no começo do programa três constantes com os valores que serão comparados.
 
-const e = 1;
-const f = 12;
-const g = 11;
+// const e = 1;
+// const f = 12;
+// const g = 11;
 
-if (e > f && e > g) {
-  console.log("'e' é o maior dos números");
-} else if (f > e && f > g) {
-  console.log("'f' é o maior dos números");
-} else if (g > e && g > f) {
-  console.log("'g' é o maior dos números");
+// if (e > f && e > g) {
+//   console.log("'e' é o maior dos números");
+// } else if (f > e && f > g) {
+//   console.log("'f' é o maior dos números");
+// } else if (g > e && g > f) {
+//   console.log("'g' é o maior dos números");
+// } else {
+//   console.log("o maior número está repetido aí... :D");
+// }
+
+// 4. Faça um programa que, dado um valor definido numa constante, retorne "positive"
+// se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
+
+const h = 0.1
+
+if (h > 0) {
+  console.log("positive");
+} else if (h === 0) {
+  console.log ("zero");
 } else {
-  console.log("o maior número está repetido aí... :D");
+  console.log("negative");
 }
+
