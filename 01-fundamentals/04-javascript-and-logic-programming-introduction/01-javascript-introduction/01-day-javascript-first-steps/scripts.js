@@ -18,11 +18,28 @@
 // 2. Faça um programa que retorne o maior de dois números.
 // Defina no começo do programa duas constantes com os valores que serão comparados.
 
-const c = 3;
-const d = 5;
+// const c = 3;
+// const d = 5;
 
-if (c > d) {
-  console.log(c + " is greater then " + d);
+// if (c > d) {
+//   console.log(c + " is greater then " + d);
+// } else {
+//   console.log(d + " is greater then " + c);
+// }
+
+// 3. Faça um programa que retorne o maior de três números.
+// Defina no começo do programa três constantes com os valores que serão comparados.
+
+const e = 1;
+const f = 12;
+const g = 11;
+
+if (e > f && e > g) {
+  console.log("'e' é o maior dos números");
+} else if (f > e && f > g) {
+  console.log("'f' é o maior dos números");
+} else if (g > e && g > f) {
+  console.log("'g' é o maior dos números");
 } else {
-  console.log(d + " is greater then " + c);
+  console.log("o maior número está repetido aí... :D");
 }
