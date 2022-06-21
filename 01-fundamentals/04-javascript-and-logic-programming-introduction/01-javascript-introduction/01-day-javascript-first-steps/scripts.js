@@ -47,13 +47,26 @@
 // 4. Faça um programa que, dado um valor definido numa constante, retorne "positive"
 // se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
 
-const h = 0.1
+// const h = 0.1
 
-if (h > 0) {
-  console.log("positive");
-} else if (h === 0) {
-  console.log ("zero");
+// if (h > 0) {
+//   console.log("positive");
+// } else if (h === 0) {
+//   console.log ("zero");
+// } else {
+//   console.log("negative");
+// }
+
+// 5. Faça um programa que defina três constantes com os valores dos três ângulos internos de um triângulo. 
+// Retorne true se os ângulos representarem os ângulos de um triângulo e false, caso contrário. Se algum ângulo for 
+// inválido o programa deve retornar uma mensagem de erro.
+
+const angleA = 72;
+const angleB = 18;
+const angleC = 90;
+
+if (angleA + angleB + angleC === 180 && angleA > 0 && angleB > 0 && angleC > 0 ) {
+  console.log(true);
 } else {
-  console.log("negative");
+  console.log(false);
 }
-
