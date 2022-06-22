@@ -61,12 +61,48 @@
 // Retorne true se os ângulos representarem os ângulos de um triângulo e false, caso contrário. Se algum ângulo for 
 // inválido o programa deve retornar uma mensagem de erro.
 
-const angleA = 72;
-const angleB = 18;
-const angleC = 90;
+// const angleA = 72;
+// const angleB = 18;
+// const angleC = 90;
 
-if (angleA + angleB + angleC === 180 && angleA > 0 && angleB > 0 && angleC > 0 ) {
-  console.log(true);
-} else {
-  console.log(false);
+// if (angleA + angleB + angleC === 180 && angleA > 0 && angleB > 0 && angleC > 0 ) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+// 6. Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
+
+const piece = "Bispo"
+const lowerPiece = piece.toLowerCase()
+
+switch (lowerPiece) {
+  case "peão":
+    console.log("peão");
+    break;
+
+  case "bispo":
+    console.log("bispo");
+    break;
+
+  case "cavalo":
+    console.log("cavalo");
+    break;
+
+  case "rainha":
+    console.log("rainha");
+    break;
+
+  case "rei":
+    console.log("rei");
+    break;
+    
+  case "torre":
+    console.log("torre");
+    break;
+    
+  default:
+    console.log("Esta não é uma peça de xadrez...");
+    break;
 }
+  
