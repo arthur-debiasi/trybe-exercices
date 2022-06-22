@@ -73,36 +73,51 @@
 
 // 6. Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
 
-const piece = "Bispo"
-const lowerPiece = piece.toLowerCase()
+// const piece = "Bispo"
+// const lowerPiece = piece.toLowerCase()
 
-switch (lowerPiece) {
-  case "peão":
-    console.log("peão");
-    break;
+// switch (lowerPiece) {
+//   case "peão":
+//     console.log("peão");
+//     break;
 
-  case "bispo":
-    console.log("bispo");
-    break;
+//   case "bispo":
+//     console.log("bispo");
+//     break;
 
-  case "cavalo":
-    console.log("cavalo");
-    break;
+//   case "cavalo":
+//     console.log("cavalo");
+//     break;
 
-  case "rainha":
-    console.log("rainha");
-    break;
+//   case "rainha":
+//     console.log("rainha");
+//     break;
 
-  case "rei":
-    console.log("rei");
-    break;
+//   case "rei":
+//     console.log("rei");
+//     break;
     
-  case "torre":
-    console.log("torre");
-    break;
+//   case "torre":
+//     console.log("torre");
+//     break;
     
-  default:
-    console.log("Esta não é uma peça de xadrez...");
-    break;
-}
+//   default:
+//     console.log("Esta não é uma peça de xadrez...");
+//     break;
+// }
   
+// 8.Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false.
+
+const i = 1;
+const j = 5;
+const k = 3;
+
+const iMod = i % 2;
+const jMod = j % 2;
+const kMod = k % 2;
+
+if (iMod === 0 || jMod === 0 || kMod === 0) {
+  console.log(true);
+} else {
+  console.log(false);
+}
