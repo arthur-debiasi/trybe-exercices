@@ -173,14 +173,64 @@
 // Atente que, sobre o custo do produto, incide um imposto de 20%, que deve ser considerado no cálculo do lucro.
 // Seu programa também deve emitir uma mensagem de erro e encerrar, caso algum dos seus valores de entrada seja menor que zero.
 
-const cost = 13;
-const price = 25;
+// const cost = 13;
+// const price = 25;
 
 
-if (cost < 0 || price < 0) {
-  console.log("Erro: o custo ou o preço são negativos.");
+// if (cost < 0 || price < 0) {
+//   console.log("Erro: o custo ou o preço são negativos.");
+// } else {
+//   let soldUnits = 1000;
+//   let profit = (price - (cost *1.2)) * soldUnits;
+//   console.log("O lucro da venda dos produtos foi de: " + profit + ".");
+// }
+
+// 11.Uma pessoa de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. 
+// Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido por ela.
+// A notação para um salário de R$1500,10, por exemplo, deve ser 1500.10. Para as faixas de impostos, 
+// use as seguintes referências:
+
+// INSS (Instituto Nacional do Seguro Social)
+// Salário bruto até R$ 1.556,94: alíquota de 8%
+// Salário bruto de R$ 1.556,95 a R$ 2.594,92: alíquota de 9%
+// Salário bruto de R$ 2.594,93 a R$ 5.189,82: alíquota de 11%
+// Salário bruto acima de R$ 5.189,82: alíquota máxima de R$ 570,88
+
+// IR (Imposto de Renda)
+// Até R$ 1.903,98: isento de imposto de renda
+// De R$ 1.903,99 a 2.826,65: alíquota de 7,5% e parcela de R$ 142,80 a deduzir do imposto
+// De R$ 2.826,66 a R$ 3.751,05: alíquota de 15% e parcela de R$ 354,80 a deduzir do imposto
+// De R$ 3.751,06 a R$ 4.664,68: alíquota de 22,5% e parcela de R$ 636,13 a deduzir do imposto
+// Acima de R$ 4.664,68: alíquota de 27,5% e parcela de R$ 869,36 a deduzir do imposto.
+
+const grossWage = 3000;
+let inssWage;
+if (grossWage < 1212) {
+  console.log("Erro: Menor que o salário mínimo atual")
+} else if ( grossWage > 5189.82) {
+  inssWage = grossWage - 570.88;
+} else if (grossWage >= 2594.93) {
+  inssWage = (1 - 0.11) * grossWage;
+} else if (grossWage >= 1556.95) {
+  inssWage = (1 - 0.09) * grossWage;
 } else {
-  let soldUnits = 1000;
-  let profit = (price - (cost *1.2)) * soldUnits;
-  console.log("O lucro da venda dos produtos foi de: " + profit + ".");
+  inssWage = (1 - 0.08) * grossWage;
 }
+
+console.log("O salário-base (com dedução do INSS) é de: R$" + inssWage);
+
+let liquidWage;
+
+if (inssWage > 4664.68) {
+  liquidWage = inssWage - ((inssWage* 0.275)-869.36)
+} else if (inssWage >= 3751.06) {
+  liquidWage = inssWage - ((inssWage* 0.225)-636.13)
+} else if (inssWage >= 2826.66) {
+  liquidWage = inssWage - ((inssWage* 0.15)-354.80)
+} else if (inssWage >= 1903.99) {
+  liquidWage = inssWage - ((inssWage* 0.075)-142.80)
+} else {
+  liquidWage = inssWage - ((inssWage* 0.275)-869.36)
+} 
+
+console.log("O salário a ser recebido é de: R$" + liquidWage);
