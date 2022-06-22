@@ -131,20 +131,37 @@
 // Porcentagem < 50 -> F
 // O programa deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100.
 
-const grade = 59;
+// const grade = 59;
 
-if (grade < 0 || grade > 100) {
-  console.log("Erro: a nota é maior que 100 ou menor que 0.");
-} else if (grade >= 90) {
-  console.log("Conceito A.");
-} else if (grade >= 80) {
-  console.log("Conceito B.");
-} else if (grade >= 70) {
-  console.log("Conceito C.");
-} else if (grade >=60) {
-  console.log("Conceito D.");
-} else if (grade >= 50) {
-  console.log("Conceito E.");
+// if (grade < 0 || grade > 100) {
+//   console.log("Erro: a nota é maior que 100 ou menor que 0.");
+// } else if (grade >= 90) {
+//   console.log("Conceito A.");
+// } else if (grade >= 80) {
+//   console.log("Conceito B.");
+// } else if (grade >= 70) {
+//   console.log("Conceito C.");
+// } else if (grade >=60) {
+//   console.log("Conceito D.");
+// } else if (grade >= 50) {
+//   console.log("Conceito E.");
+// } else {
+//   console.log("Conceito F.");
+// }
+
+// 9. Escreva um programa que defina três números em constantes 
+// e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false.
+
+const a = 2;
+const b = 6;
+const c = 32;
+
+const aMod = a % 2;
+const bMod = b % 2;
+const cMod = c % 2;
+
+if (aMod != 0 || bMod != 0 || cMod != 0) {
+  console.log(true);
 } else {
-  console.log("Conceito F.");
+  console.log(false);
 }
