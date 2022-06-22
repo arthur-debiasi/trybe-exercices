@@ -152,16 +152,35 @@
 // 9. Escreva um programa que defina três números em constantes 
 // e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false.
 
-const a = 2;
-const b = 6;
-const c = 32;
+// const a = 2;
+// const b = 6;
+// const c = 32;
 
-const aMod = a % 2;
-const bMod = b % 2;
-const cMod = c % 2;
+// const aMod = a % 2;
+// const bMod = b % 2;
+// const cMod = c % 2;
 
-if (aMod != 0 || bMod != 0 || cMod != 0) {
-  console.log(true);
+// if (aMod != 0 || bMod != 0 || cMod != 0) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+// 10.Escreva um programa que se inicie com dois valores em duas constantes 
+// diferentes: o custo de um produto e seu valor de venda. A partir dos valores, 
+// calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa 
+// terá ao vender mil desses produtos.
+// Atente que, sobre o custo do produto, incide um imposto de 20%, que deve ser considerado no cálculo do lucro.
+// Seu programa também deve emitir uma mensagem de erro e encerrar, caso algum dos seus valores de entrada seja menor que zero.
+
+const cost = 13;
+const price = 25;
+
+
+if (cost < 0 || price < 0) {
+  console.log("Erro: o custo ou o preço são negativos.");
 } else {
-  console.log(false);
+  let soldUnits = 1000;
+  let profit = (price - (cost *1.2)) * soldUnits;
+  console.log("O lucro da venda dos produtos foi de: " + profit + ".");
 }
