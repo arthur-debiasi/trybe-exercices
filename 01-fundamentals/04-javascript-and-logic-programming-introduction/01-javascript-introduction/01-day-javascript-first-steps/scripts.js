@@ -108,16 +108,43 @@
   
 // 8.Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false.
 
-const i = 1;
-const j = 5;
-const k = 3;
+// const i = 1;
+// const j = 5;
+// const k = 3;
 
-const iMod = i % 2;
-const jMod = j % 2;
-const kMod = k % 2;
+// const iMod = i % 2;
+// const jMod = j % 2;
+// const kMod = k % 2;
 
-if (iMod === 0 || jMod === 0 || kMod === 0) {
-  console.log(true);
+// if (iMod === 0 || jMod === 0 || kMod === 0) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+// 7. Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
+// Porcentagem >= 90 -> A
+// Porcentagem >= 80 -> B
+// Porcentagem >= 70 -> C
+// Porcentagem >= 60 -> D
+// Porcentagem >= 50 -> E
+// Porcentagem < 50 -> F
+// O programa deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100.
+
+const grade = 59;
+
+if (grade < 0 || grade > 100) {
+  console.log("Erro: a nota é maior que 100 ou menor que 0.");
+} else if (grade >= 90) {
+  console.log("Conceito A.");
+} else if (grade >= 80) {
+  console.log("Conceito B.");
+} else if (grade >= 70) {
+  console.log("Conceito C.");
+} else if (grade >=60) {
+  console.log("Conceito D.");
+} else if (grade >= 50) {
+  console.log("Conceito E.");
 } else {
-  console.log(false);
+  console.log("Conceito F.");
 }
