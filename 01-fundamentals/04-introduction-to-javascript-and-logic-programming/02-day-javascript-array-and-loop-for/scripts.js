@@ -31,16 +31,27 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // seja maior que 20, imprima a mensagem: "valor maior que 20". 
 // Caso não seja, imprima a mensagem: "valor menor ou igual a 20";
 
-let sum = 0;
-let index = 0;
-for (let index = 0; index < numbers.length; index++) {
-    sum += numbers[index];
-}
-let average = sum / numbers.length;
-console.log("A média aritmética dos valores contidos em numbers é", average, ".");
+// let sum = 0;
+// let index = 0;
+// for (let index = 0; index < numbers.length; index++) {
+//     sum += numbers[index];
+// }
+// let average = sum / numbers.length;
+// console.log("A média aritmética dos valores contidos em numbers é", average, ".");
 
-if (average > 20) {
-    console.log("valor maior que 20");
-} else {
-    console.log("valor menor ou igual a 20");
+// if (average > 20) {
+//     console.log("valor maior que 20");
+// } else {
+//     console.log("valor menor ou igual a 20");
+// }
+
+// 5. 🚀 Utilizando for, descubra qual o maior valor contido 
+// no array e imprima-o;
+
+let greaterNumber = numbers[0]
+for (let index = 1; index < numbers.length; index++) {
+    if (numbers[index] > greaterNumber) {
+        greaterNumber = numbers[index];
+    }
 }
+console.log(greaterNumber);
