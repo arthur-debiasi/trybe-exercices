@@ -76,12 +76,23 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // 7. Utilizando for, descubra qual o menor valor contido 
 // no array e imprima-o;
 
-let minor = numbers[0];
+// let minor = numbers[0];
 
-for (let index = 1; index < numbers.length; index++) {
-    if (numbers[index] < minor) {
-        minor = numbers[index]
-    }   
+// for (let index = 1; index < numbers.length; index++) {
+//     if (numbers[index] < minor) {
+//         minor = numbers[index]
+//     }   
+// }
+// console.log(minor);
+
+// 8. Utilizando for, crie um array que vá de 1 até 25 e 
+// imprima o resultado;
+
+let array = [];
+let last = 25;
+
+for (let index = 1; index <= last; index++) {
+    array.push(index);   
 }
-console.log(minor);
 
+console.log(array);
