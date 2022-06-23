@@ -100,16 +100,36 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // 9. Utilizando o array criado no exercício anterior imprima 
 // o resultado da divisão de cada um dos elementos por 2.
 
-let array = [];
-let last = 25;
+// let array = [];
+// let last = 25;
 
-for (let index = 1; index <= last; index++) {
-    array.push(index);   
-}
+// for (let index = 1; index <= last; index++) {
+//     array.push(index);   
+// }
 
-console.log(array);
+// console.log(array);
 
-for (let count = 0; count < array.length; count++) {
-    console.log (array[count]/2)
+// for (let count = 0; count < array.length; count++) {
+//     console.log (array[count]/2)
+    
+// }
+
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+// Bônus.1. Ordene o array numbers em ordem crescente e imprima seus valores;
+
+for (let i = 1; i < numbers.length; i++) {
+    
+    for (let j = 0; j < i ; j++) {
+       
+        if (numbers[i] < numbers[j]) {
+           let lower = numbers[i];
+           numbers[i] = numbers[j];
+           numbers[j] = lower;
+       
+        }
+        
+    }
     
 }
+console.log(numbers);
