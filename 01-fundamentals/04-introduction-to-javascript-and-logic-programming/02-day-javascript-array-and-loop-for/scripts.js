@@ -116,16 +116,34 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
-// Bônus.1. Ordene o array numbers em ordem crescente e imprima seus valores;
+// Bônus 1. Ordene o array numbers em ordem crescente e imprima seus valores;
+
+// for (let i = 1; i < numbers.length; i++) {
+    
+//     for (let j = 0; j < i ; j++) {
+       
+//         if (numbers[i] < numbers[j]) {
+//            let lower = numbers[i];
+//            numbers[i] = numbers[j];
+//            numbers[j] = lower;
+       
+//         }
+        
+//     }
+    
+// }
+// console.log(numbers);
+
+// Bônus 2.  Ordene o array numbers em ordem decrescente e imprima seus valores;
 
 for (let i = 1; i < numbers.length; i++) {
     
     for (let j = 0; j < i ; j++) {
        
-        if (numbers[i] < numbers[j]) {
-           let lower = numbers[i];
+        if (numbers[i] > numbers[j]) {
+           let higher = numbers[i];
            numbers[i] = numbers[j];
-           numbers[j] = lower;
+           numbers[j] = higher;
        
         }
         
