@@ -101,14 +101,32 @@ for (let j = 1; j <= n; j++) {
 } 
 */
 
-//  3. 2- Para o segundo exercício, faça o mesmo que antes, mas que imprima um triângulo 
+//  Bônus 2 -  Para o segundo exercício, faça o mesmo que antes, mas que imprima um triângulo 
 // retângulo com 5 asteriscos de base.
 
-let n = 5;
+// let n = 5;
+// let line = "";
+
+// for (let i = 0; i < n; i++) {
+//     line += "*"
+//     console.log(line);
+    
+// }
+
+// Bônus 3 - Agora inverta o lado do triângulo.
+// Atenção! Note que esse exercício é bem mais complexo que o anterior! 
+// Não basta, aqui, imprimir somente asteriscos. Você precisará de uma 
+// lógica para imprimir espaços também.
+
+n = 5;
 let line = "";
 
-for (let i = 0; i < array.length; i++) {
-    line += "*"
-    console.log(line);
+for (let i = n; i > 0; i -= 1) {
+    line += 1;
+    while (j > 0) {
+        
+    }
+
+  console.log(line);
     
 }
