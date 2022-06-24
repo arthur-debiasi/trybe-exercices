@@ -46,19 +46,43 @@ let array = ["java", "javascript", "python", "html", "css"];
 
 // Fazendo um programa pra cada caso:
 
-let bigger = array[0];
-let smaller = array[0];
+// let bigger = array[0];
+// let smaller = array[0];
 
-for (let i = 1; i < array.length; i++) {
-  if (array[i].length > bigger.length) {
-    bigger = array[i];
+// for (let i = 1; i < array.length; i++) {
+//   if (array[i].length > bigger.length) {
+//     bigger = array[i];
+//   }
+// }
+// console.log("A maior palavra é", bigger + ".");
+// console.log("");
+// for (let i = 1; i < array.length; i++) {
+//   if (array[i].length < smaller.length) {
+//     smaller = array[i];
+//   }
+// }
+// console.log("A menor palavra é", smaller + ".");
+
+// 4. Um número primo é um número inteiro maior do que 1 que possui somente dois divisores,
+//  ou seja, é divisível por 1 e por ele mesmo. Sabendo disso, escreva um algoritmo que
+//   retorne o maior número primo entre 2 e 50.
+
+let n1 = 2;
+let n2 = 50;
+let higherPrime = 0;
+
+for (let i = n1; i <= n2; i += 1) {
+  let isPrime = true;
+  for (let j = n1; j < i; j++) {
+    if (i % j === 0) {
+      isPrime = false;
+    }
+  }
+  
+  if (isPrime) {
+    higherPrime = i;
   }
 }
-console.log("A maior palavra é", bigger + ".");
-console.log("");
-for (let i = 1; i < array.length; i++) {
-  if (array[i].length < smaller.length) {
-    smaller = array[i];
-  }
-}
-console.log("A menor palavra é", smaller + ".");
+console.log(higherPrime);
+
+
