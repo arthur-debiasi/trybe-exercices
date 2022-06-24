@@ -67,22 +67,34 @@ let array = ["java", "javascript", "python", "html", "css"];
 //  ou seja, é divisível por 1 e por ele mesmo. Sabendo disso, escreva um algoritmo que
 //   retorne o maior número primo entre 2 e 50.
 
-let n1 = 2;
-let n2 = 50;
-let higherPrime = 0;
+// let n1 = 2;
+// let n2 = 50;
+// let higherPrime = 0;
 
-for (let i = n1; i <= n2; i += 1) {
-  let isPrime = true;
-  for (let j = n1; j < i; j++) {
-    if (i % j === 0) {
-      isPrime = false;
-    }
-  }
-  
-  if (isPrime) {
-    higherPrime = i;
-  }
+// for (let i = n1; i <= n2; i += 1) {
+//   let isPrime = true;
+//   for (let j = n1; j < i; j++) {
+//     if (i % j === 0) {
+//       isPrime = false;
+//     }
+//   }
+
+//   if (isPrime) {
+//     higherPrime = i;
+//   }
+// }
+// console.log(higherPrime);
+
+// Bônus 1.Agora vamos trabalhar com algumas formas geométricas! Faça um programa que, dado um
+//  valor n qualquer, seja n > 1, imprima na tela um quadrado feito de asteriscos de lado de
+//  tamanho n. 
+
+let n = 5;
+let line = "";
+
+for (let i = 0; i <= n; i++) {
+  line += "*";
 }
-console.log(higherPrime);
-
-
+for (let j = 1; j <= n; j++) {
+  console.log(line);
+}
