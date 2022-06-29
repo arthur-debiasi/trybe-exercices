@@ -70,10 +70,29 @@ function changeCenterContent() {
 }   
 changeCenterContent(); 
  
- /* Crie uma função que corrija o texto da tag <h1>.
- Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
- Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+ /* Crie uma função que corrija o texto da tag <h1>.*/
+ function h1Corrector() {
+     let correctH1 = document.getElementsByClassName("title")[0];
+     correctH1.innerText = "Exercícios 5.1 - Javascript - DOM e Seletores"
+ }
+h1Corrector();
+
+ /* Crie uma função que modifique todo o texto da tag <p> para maiúsculo.*/ 
+    function upperCaseP() {
+        let upperCase = document.getElementsByTagName('p')[0];
+            upperCase.style.textTransform = "uppercase";
+    }
+    upperCaseP();
+
+/* Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
+       function consoleLogPTags() {
+           let pTags = document.getElementsByTagName('p');
+           for (const iterator of pTags) {
+               console.log(iterator);
+           }
+       }
+       consoleLogPTags();
     </script>
   </body>
 </html>
