@@ -1,58 +1,92 @@
 const lesson1 = {
-    materia: 'Matemática',
-    numeroEstudantes: 20,
-    professor: 'Maria Clara',
-    turno: 'manhã',
-  };
-  
-  const lesson2 = {
-    materia: 'História',
-    numeroEstudantes: 20,
-    professor: 'Carlos',
-  };
-  
-  const lesson3 = {
-    materia: 'Matemática',
-    numeroEstudantes: 10,
-    professor: 'Maria Clara',
-    turno: 'noite',
-  }; 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  const addNewKey = (obj, key, value) => {
-    obj[key] = value;
-  };
-  
-  addNewKey(lesson2, 'turno', 'noite');
-  console.log(lesson2);
+  materia: "Matemática",
+  numeroEstudantes: 20,
+  professor: "Maria Clara",
+  turno: "manhã",
+};
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+const lesson2 = {
+  materia: "História",
+  numeroEstudantes: 20,
+  professor: "Carlos",
+};
 
-  const listObjKeys = (obj) => {return Object.keys(obj)}
+const lesson3 = {
+  materia: "Matemática",
+  numeroEstudantes: 10,
+  professor: "Maria Clara",
+  turno: "noite",
+};
+console.log('=======1======');
 
-  const lesson1Keys = listObjKeys(lesson1);
-  const lesson2Keys = listObjKeys(lesson2);
-  const lesson3Keys = listObjKeys(lesson3);
+const addNewKey = (obj, key, value) => {
+  obj[key] = value;
+};
 
-  console.log(lesson1Keys);
-  console.log(lesson2Keys);
-  console.log(lesson3Keys);
+addNewKey(lesson2, "turno", "noite");
+console.log(lesson2);
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+console.log('=======2======');
+
+const listObjKeys = (obj) => {
+  return Object.keys(obj);
+};
+
+const lesson1Keys = listObjKeys(lesson1);
+const lesson2Keys = listObjKeys(lesson2);
+const lesson3Keys = listObjKeys(lesson3);
+
+console.log(lesson1Keys);
+console.log(lesson2Keys);
+console.log(lesson3Keys);
+
+console.log('=======3======');
 
 const objSize = (obj) => {
   const objet = listObjKeys(obj);
-  return (objet.length)
-}
+  return objet.length;
+};
 console.log(objSize(lesson1Keys));
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+console.log('=======4======');
 
-const listObjValues = (obj) => {return Object.values(obj)}
+const listObjValues = (obj) => {
+  return Object.values(obj);
+};
 
 console.log(listObjValues(lesson1));
 console.log(listObjValues(lesson2));
 console.log(listObjValues(lesson3));
 
-const allLessons = Object.assign({}, {lesson1, lesson2, lesson3})
-console.log('----------------');
+console.log('=======5======');
+
+const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 });
 console.log(allLessons);
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+console.log('=======6======');
+
+const studentCount = (obj) => {
+  const lessons = listObjKeys(obj);
+  let count = 0;
+  for (let i = 0; i < lessons.length; i += 1) {
+    let lessonKey = lessons[i];
+    count += obj[lessonKey]["numeroEstudantes"];
+  }
+  return console.log(count);
+};
+studentCount(allLessons);
+
+console.log("=======7======");
+
+const getValueByNumber = (lesson, number) => {
+  const lessonObj = allLessons[lesson];
+  const lessonKeys = listObjKeys(lessonObj);
+  const keyNumber = lessonKeys[number];
+  return allLessons[lesson][keyNumber];
+};
+
+console.log(getValueByNumber("lesson1", 0));
+
+console.log("=======8======");
+
