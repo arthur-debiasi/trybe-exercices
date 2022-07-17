@@ -1,4 +1,3 @@
-
 const verifyIsNumber = (value1, value2) => {
   if (!value1 || !value2) {
     throw new Error("Preencha os dois campos para realizar a soma.");
@@ -18,7 +17,6 @@ function sum() {
   } catch (error) {
     console.log(error.message);
     document.getElementById("result").innerHTML = `Erro: ${error.message}`;
-
   } finally {
     document.getElementById("value1").value = "";
     document.getElementById("value2").value = "";
@@ -29,4 +27,3 @@ window.onload = () => {
   button.addEventListener("click", sum);
 };
 // --------------------------------------------------------------------------
-

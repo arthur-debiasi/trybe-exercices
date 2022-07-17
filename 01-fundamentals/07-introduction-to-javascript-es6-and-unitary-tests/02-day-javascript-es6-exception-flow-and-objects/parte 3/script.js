@@ -90,3 +90,18 @@ console.log(getValueByNumber("lesson1", 0));
 
 console.log("=======8======");
 
+const verifyPair = (obj, key, value) => {
+  const objEntries = Object.entries(obj);
+  let isEqual = false;
+  for (const index in objEntries) {
+    if (objEntries[index][0] === key && objEntries[index][1] === value) {
+      isEqual = true;
+    }
+  }
+  return isEqual
+}
+
+
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
