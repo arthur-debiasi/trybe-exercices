@@ -11,8 +11,8 @@ function sum() {
   try {
     const value1 = document.getElementById("value1").value;
     const value2 = document.getElementById("value2").value;
-    const result = Number(value1) + Number(value2);
     verifyIsNumber(value1, value2);
+    const result = Number(value1) + Number(value2);
     document.getElementById("result").innerHTML = `Resultado: ${result}`;
   } catch (error) {
     console.log(error.message);
