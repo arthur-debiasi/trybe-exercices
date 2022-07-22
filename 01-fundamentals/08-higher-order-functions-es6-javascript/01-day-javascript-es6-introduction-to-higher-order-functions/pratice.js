@@ -6,7 +6,7 @@ console.log(`-=-=-=-=-= 1 =-=-=-=-=-
 const nameEmail = (fullName) => {
     const object = {};
     object.name = fullName;
-    object.eMail = `${fullName.replace(/ /g, "_")}@trybe.com`;
+    object.eMail = `${(fullName.replace(/ /g, "_")).toLowerCase()}@trybe.com`;
     return object;
 }
 
@@ -68,3 +68,43 @@ const totalPoints = (rightAnswers, studentAnswers, compareFn) =>{
     return `Resultado final: ${sum}`;
 }
 console.log(totalPoints(RIGHT_ANSWERS, STUDENT_ANSWERS, compare));
+
+console.log(`-=-=-=-=-= BONUS =-=-=-=-=-
+`);
+
+const mage = {
+    healthPoints: 130,
+    intelligence: 45,
+    mana: 125,
+    damage: undefined,
+  };
+  
+  const warrior = {
+    healthPoints: 200,
+    strength: 30,
+    weaponDmg: 2,
+    damage: undefined,
+  };
+  
+  const dragon = {
+    healthPoints: 350,
+    strength: 50,
+    damage: undefined,
+  };
+  
+  const battleMembers = { mage, warrior, dragon };
+
+  const dragonAtk = (dragon) => Math.floor(Math.random() * dragon.strength) + 15;
+  const warriorAtk = (warrior) => Math.floor(Math.random() * warrior.strength * warrior.weaponDmg) + warrior.strength;
+  const mageAtk = (mage) => {
+    if (mage.mana < 15) {
+        return { 
+            damage: 'Not enougth mana points...',
+            mana: 0
+          }
+    }
+    return { 
+    damage: Math.floor(Math.random() * mage.intelligence * 2) + mage.intelligence,
+    mana: mage.mana - 15
+  }
+}
