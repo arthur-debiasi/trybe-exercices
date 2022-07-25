@@ -118,7 +118,6 @@ const nameAndAge = (books) => {
         age: book.releaseYear - book.author.birthYear,
         author: book.author.name
     }))
-    // return mappedBooks;
     return mappedBooks.sort((bookA, bookB) => bookA.age - bookB.age);
 }
 
