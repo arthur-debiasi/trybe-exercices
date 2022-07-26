@@ -198,3 +198,40 @@ const oldBooksOrdered = (books) => {
 }
 
 console.log(oldBooksOrdered(books));
+
+console.log('-=-=-=-=exercício 5=-=-=-=-');
+
+// 🚀 5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
+
+const fantasyOrScienceFictionAuthors = (books) => {
+  const ftsyOrSciFi = books.filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica');
+  const orderedFtsyOrSciFi = ftsyOrSciFi.map((book) => `${book.author.name}`)
+  return orderedFtsyOrSciFi.sort();
+} 
+
+console.log(fantasyOrScienceFictionAuthors(books));
+
+console.log('-=-=-=-=exercício 6=-=-=-=-');
+
+// 🚀 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+
+const expectedResult6 = [
+  'O Senhor dos Anéis',
+  'Fundação',
+  'O Chamado de Cthulhu',
+];
+
+const oldBooks = (books) => books.filter((book) => 2022 - book.releaseYear > 60).map((book) => book.name);
+
+console.log(oldBooks(books));
+
+console.log('-=-=-=-=exercício 7=-=-=-=-');
+
+//7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
+// Dica: cada inicial termina com um ponto.
+
+const authorWith3DotsOnName = (books) => books.find((book) => (book.author.name.split(' ').filter((word) => word.endsWith('.')).length === 3)).name;
+
+console.log(authorWith3DotsOnName(books));
+
+// Essa eu até entendo olhando o gabarito mas não consegui pensar em um jeito de construir isso linha por linha
