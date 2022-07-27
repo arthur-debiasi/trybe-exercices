@@ -62,7 +62,7 @@ const books = [
   ];
   
   // Adicione o código do exercício aqui:
-
+//   🚀 4- Encontre o livro com o maior nome.
 
 const expectedResult = {
     id: 1,
@@ -76,5 +76,8 @@ const expectedResult = {
   };
   
   function longestNamedBook() {
-    // escreva seu código aqui
+    return books
+    .reduce((acc, curr) => curr.name.length > acc.name.length ? curr : acc);
   }
+
+  console.log(longestNamedBook());
