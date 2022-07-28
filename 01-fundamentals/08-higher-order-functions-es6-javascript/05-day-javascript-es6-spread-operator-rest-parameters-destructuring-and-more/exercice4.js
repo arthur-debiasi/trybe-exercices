@@ -30,3 +30,12 @@ const people = [
   ];
   
   // escreva filterPeople abaixo
+
+  const filterPeople = (people) => { 
+    const aussie = people
+    .filter(({bornIn, nationality}) => nationality === 'Australian' && bornIn < 2000)
+    .map(({ name }) => name);
+    return aussie;
+  }
+
+  console.log(filterPeople(people));
