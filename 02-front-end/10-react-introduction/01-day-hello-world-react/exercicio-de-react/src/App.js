@@ -3,11 +3,11 @@
 
     const Task = (value, index) => {
       return (
-        <li key={`${value}-${index}`}>{value}</li>
+        <li key={`task-${index}`}>{value}</li>
       );
     }
 
-    const tarefas = ['Acordar', 'Tomar café', 'Escovar os dentes', 'Ir trabalhar', 'Fazer exercício'];
+    const tarefas = ['Acordar', 'Tomar café', 'Escovar os dentes', 'Estudar', 'Jantar', 'Dormir'];
 
     class App extends Component {
       render() {
